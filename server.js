@@ -3,6 +3,8 @@
 const Hapi = require('@hapi/hapi');
 const dotenv = require('dotenv');
 
+const websocketServer = require('./websocket/websocket-server');
+
 const networkRoute = require('./routes/network');
 const blockRoute = require('./routes/block');
 const addressRoute = require('./routes/address');
