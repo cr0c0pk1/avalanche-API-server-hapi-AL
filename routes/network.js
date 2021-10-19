@@ -1,4 +1,4 @@
-const networkService = require('../services/p-chain');
+const networkService = require('../services/network');
 
 module.exports = {
     method: 'GET',
