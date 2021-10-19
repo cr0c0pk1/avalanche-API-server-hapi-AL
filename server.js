@@ -6,6 +6,7 @@ const dotenv = require('dotenv');
 const networkRoute = require('./routes/network');
 const blockRoute = require('./routes/block');
 const addressRoute = require('./routes/address');
+const transactionRoute = require('./routes/transactions');
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ const init = async () => {
     server.route(networkRoute);
     server.route(blockRoute);
     server.route(addressRoute);
+    server.route(transactionRoute);
     
     await server.start();
     console.log('Server running on %s', server.info.uri);
