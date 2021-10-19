@@ -4,6 +4,7 @@ const Hapi = require('@hapi/hapi');
 const dotenv = require('dotenv');
 
 const networkRoute = require('./routes/network');
+const blockRoute = require('./routes/block');
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ const init = async () => {
     });
 
     server.route(networkRoute);
+    server.route(blockRoute);
     
     await server.start();
     console.log('Server running on %s', server.info.uri);
